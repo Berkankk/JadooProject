@@ -1,0 +1,40 @@
+﻿@model List<GetDestinationQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+
+<div class="container">
+    <h1>Tur Rotaları</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Şehir</th>
+            <th>Tur Süresi</th>
+            <th>Fiyat</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.City</td>
+                <td>@item.Duration</td>
+                <td>@item.Price ₺ </td>
+                <td>
+                    <a href="/Destination/DeleteDestination/@item.DestinationID" class="btn btn-danger">Sil</a>
+                    <a href="/Destination/UpdateDestination/@item.DestinationID" class="btn btn-info">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <br />
+    <a href="/Destination/CreateDestination/" class="btn btn-primary">Yeni Rota Ekleme Sayfası</a>
+</div>
+
+
+

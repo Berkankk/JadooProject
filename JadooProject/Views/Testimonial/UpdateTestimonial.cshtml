@@ -1,0 +1,25 @@
+﻿@model UpdateTestimonialCommand
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+}
+
+<h3>Referans Güncelleme Sayfası</h3>
+
+<form method="post">
+    <input type="hidden" asp-for="TestimonialID" />
+    <label>Resim Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>AD Soyad</label>
+    <input type="text" asp-for="NameSurname" class="form-control" />
+    <br />
+    <label>Yorum</label>
+    <input type="text" asp-for="Comment" class="form-control" />
+    <br />
+    <label>Ülke</label>
+    <input type="text" asp-for="Country" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+
+</form>
+

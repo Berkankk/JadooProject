@@ -1,0 +1,24 @@
+﻿@model CreateTestimonialCommand
+@{
+    ViewData["Title"] = "CreateTestimonial";
+}
+
+<h3> Yeni Refeans Ekleme Sayfası</h3>
+
+<form method="post">
+    <label>Resim Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" asp-for="NameSurname" class="form-control" />
+    <br />
+    <label>Yorum</label>
+    <input type="text" asp-for="Comment" class="form-control" />
+    <br />
+    <label>Ülke</label>
+    <input type="text" asp-for="Country" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

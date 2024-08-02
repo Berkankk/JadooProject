@@ -1,0 +1,40 @@
+﻿@model List<GetTestimonialQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+
+<div class="container">
+    <h1>Referanslarımız </h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Resim Url</th>
+            <th>Ad Soyad</th>
+            <th>Yorum</th>
+            <th>Ülke</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.ImageUrl</td>
+                <td>@item.NameSurname</td>
+                <td>@item.Comment</td>
+                <td>@item.Country</td>
+                <td>
+                    <a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a>
+                    <a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-info">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <br />
+    <a href="/Testimonial/CreateTestimonial/" class="btn btn-primary">Yeni Referans Ekleme Sayfası</a>
+</div>
+

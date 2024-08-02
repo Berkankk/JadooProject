@@ -1,0 +1,28 @@
+﻿
+@model UpdateDestinationCommand
+@{
+    ViewData["Title"] = "UpdateDestination";
+}
+
+<div class="container">
+    <h3>Tur Rotası Güncelleme Sayfası</h3>
+
+    <form method="post">
+        <input type="hidden" asp-for="DestinationID" />
+        <label>Şehir</label>
+        <input type="text" asp-for="City" class="form-control" />
+        <br />
+        <label>Resim Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Fiyat</label>
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+        <label>Tur Süresi</label>
+        <input type="text" asp-for="Duration" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+
+
+    </form>
+</div>

@@ -1,0 +1,38 @@
+﻿@model CreateManuelCommand
+@{
+    ViewData["Title"] = "CreateManuel";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">Rezarvasyon Ekleme Sayfası</div>
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <div class="container">
+                    <div class="form-group">
+                        <form method="post">
+
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Açıklama</label>
+                            <input type="text" asp-for="Description" class="form-control" />
+                            <br />
+                            <label>İkon</label>
+                            <input type="text" asp-for="Icon" class="form-control" />
+                            <br />
+
+
+                            <input type="submit" class="btn btn-outline-primary" value="Ekle" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

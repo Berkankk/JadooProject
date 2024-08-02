@@ -1,0 +1,30 @@
+﻿@model CreateFeatureCommand
+@{
+    ViewData["Title"] = "CreateFeature";
+}
+
+
+<div class="container">
+    <h3> Yeni Öne Çıkan Oluşturma Sayfası</h3>
+
+    <form method="post">
+
+        <label>Resim Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Kısa Açıklama</label>
+        <input type="text" asp-for="ShortDescription" class="form-control" />
+        <br />
+        <label>Uzun Açıklama</label>
+        <input type="text" asp-for="LongDescription" class="form-control" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" asp-for="LowerDescription" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Kaydet</button>
+
+
+    </form>
+</div>
+
+

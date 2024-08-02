@@ -1,0 +1,29 @@
+﻿@model UpdateFeatureCommand
+@{
+    ViewData["Title"] = "UpdateFeature";
+}
+
+
+<div class="container">
+    <h3>Öne Çıkan Güncelleme Sayfası</h3>
+
+    <form method="post">
+        <input type="hidden" asp-for="FeatureID" />
+        <label>Resim Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Kısa Açıklama</label>
+        <input type="text" asp-for="ShortDescription" class="form-control" />
+        <br />
+        <label>Uzun Açıklama</label>
+        <input type="text" asp-for="LongDescription" class="form-control" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" asp-for="LowerDescription" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+
+
+    </form>
+</div>
+

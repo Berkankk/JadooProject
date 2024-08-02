@@ -1,0 +1,28 @@
+﻿@model CreateDestinationCommand
+@{
+    ViewData["Title"] = "CreateDestination";
+}
+
+<div class="container">
+    <h3> Yeni Tur Rotası Oluşturma Sayfası</h3>
+
+    <form method="post">
+        
+        <label>Şehir</label>
+        <input type="text" asp-for="City" class="form-control" />
+        <br />
+        <label>Resim Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Fiyat</label>
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+        <label>Tur Süresi</label>
+        <input type="text" asp-for="Duration" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Kaydet</button>
+
+
+    </form>
+</div>
+

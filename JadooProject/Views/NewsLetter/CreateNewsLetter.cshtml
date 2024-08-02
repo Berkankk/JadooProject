@@ -1,0 +1,30 @@
+﻿@model CreateNewsLetterCommand
+@{
+    ViewData["Title"] = "CreateNewsLetter";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">Email Abone Ekleme Sayfası</div>
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <div class="container">
+                    <div class="form-group">
+                        <form method="post">
+
+                            <label>Email</label>
+                            <input type="text" asp-for="Email" class="form-control" />
+                            <br />
+                            <input type="submit" class="btn btn-outline-primary" value="Ekle" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
