@@ -16,8 +16,7 @@ namespace JadooProject.Features.CQRS.Handlers.DestinationHandlers
         public void Handle(RemoveDestinationCommand command)
         {
             _repository.Delete(command.ID);
-
-
         }
     }
 }
+

@@ -1,6 +1,7 @@
 ﻿@model List<GetNewsLetterQueryResult>
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
     int count = 0;
 }
 
@@ -17,7 +18,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Mail</th>
+                        <th>EMail</th>
                         <th colspan="2" class="text-center">İşlemler</th>
                     </tr>
                 </thead>

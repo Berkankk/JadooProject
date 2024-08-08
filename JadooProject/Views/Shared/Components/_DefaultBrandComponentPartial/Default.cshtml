@@ -1,0 +1,29 @@
+﻿@model List<GetBrandQueryResult>
+
+@{
+    var brands = Model ?? new List<GetBrandQueryResult>(); // Model'in null olup olmadığını kontrol edin
+}
+
+<div class="position-relative pt-9 pt-lg-8 pb-6 pb-lg-8">
+    <div class="container">
+        <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2 flex-center">
+            @if (brands.Count > 0)
+            {
+                @foreach (var item in brands)
+                {
+                    <div class="col">
+                        <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                            <div class="card-body text-center">
+                                <img class="img-fluid" src="@item.ImageUrl" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p></p> <!-- Boş durum için bir mesaj gösterebilirsiniz -->
+            }
+        </div>
+    </div>
+</div>

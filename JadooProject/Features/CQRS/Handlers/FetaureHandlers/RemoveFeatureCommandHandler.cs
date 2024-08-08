@@ -13,7 +13,8 @@ namespace JadooProject.Features.CQRS.Handlers.FetaureHandlers
             _repository = repository;
         }
 
-        public void Handle(RemoveFeatureCommand command)  //Metodu tanımladık command oluşturduğumuz sınıfı verdik sonrasında da _repositoryden gelen delete metodu ile parametreden gelen id değerini sildik
+        public void Handle(RemoveFeatureCommand command) 
+        //Metodu tanımladık command oluşturduğumuz sınıfı verdik sonrasında da _repositoryden gelen delete metodu ile parametreden gelen id değerini sildik
         {
             _repository.Delete(command.ID);
         }
